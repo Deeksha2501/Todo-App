@@ -71,13 +71,14 @@ li div{
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
     right: 0px;
-    width: 10%;
+    width: 8%;
     font-size: small;
     text-align: center;
     margin-top: 20px;
     color:rgb(212, 2, 2);
     padding: 10px 0;
     cursor:  pointer;
+    float: right;
 }
 
 form{
@@ -182,6 +183,8 @@ input[type="checkbox"]:checked ~ span:nth-child(4){
     color: rgb(112, 109, 109);
 }
 
-.a{
-    background-color: #88236f;
+#update{
+    width: 20px;
+    margin-right: 10%;
+    /* float: right; */
 }
