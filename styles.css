@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cabin&display=swap');
+
+
+body{
+    background: linear-gradient(to bottom right ,  rgba(187, 97, 247 , 0.9) , rgba(78, 126, 94, 0.9)) ,url(todo3.jpg) ;
+    background-size: cover;
+    font-family: ubuntu;
+    background-attachment: fixed;
+}
+
+h1{
+    color: #fff;
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-top: 80px;
+    text-align: center;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+.content{
+    background-color: rgba(255 ,255 ,255, .4);
+    max-width: 960px;
+    margin: 30px auto;
+    padding:  20px 30px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    /* background: #f6f6f6; */
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: 46px;
+}
+
+
+/* li span{
+    display: inline-block;
+} */
+
+li span:nth-child(4){
+    color : rgb(34, 34, 34);
+    margin-left: 30px;
+    position: relative;
+    font-size: 16px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+li span:nth-child(3){
+    font-size: 20px;
+    margin-top: 6px;
+    color: #000;
+    display: block;
+    margin-left: 30px;
+    font-weight: 500;
+    font-family: 'Cabin', sans-serif;
+}
+
+li div{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0px;
+    width: 10%;
+    font-size: small;
+    text-align: center;
+    margin-top: 20px;
+    color:rgb(212, 2, 2);
+    padding: 10px 0;
+    cursor:  pointer;
+}
+
+form{
+    width: 100%;
+}
+
+form input{
+    background-color: transparent;
+    float: left;
+    width: 40%;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255 ,255 ,255, .4);
+    margin: 0 1%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+
+form input:focus{
+    outline: none;
+    border-bottom: 3px solid #88236f;
+    padding-bottom: 8px;
+    transition: all ease 0.2s;
+}
+
+form:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+button{
+    border: 0;
+    background: transparent;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 13px;
+    width: 14%;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #88236f;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+}
+button:hover{
+    transform: translateY(-2px);
+}
+button:active{
+    transform: translateY(1px);
+}
+
+label{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border-radius: 3px;
+    border: .1px solid black;
+    position: absolute;
+    top: 31px;
+    left: 12px;
+}
+
+label div{
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+input[type = "checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked + label {
+    background-color:  rgba(17, 100, 196, 0.9) ;
+}
+
+input[type="checkbox"]:checked + label > div {
+    display: table;
+    color: white;
+}
+
+input[type="checkbox"]:checked ~ span:nth-child(3){
+    text-decoration: line-through;
+    color: rgb(112, 109, 109);
+}
+
+input[type="checkbox"]:checked ~ span:nth-child(4){
+    /* text-decoration: line-through; */
+    color: rgb(112, 109, 109);
+}
+
+.a{
+    background-color: #88236f;
+}

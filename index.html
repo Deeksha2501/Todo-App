@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Don't be lazy!!<br> Start Today</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form" autocomplete="off">
+                <input type="text" name = "todo" placeholder="Name of todo">
+                <input type="text" name = "motive" placeholder="Motivation text">
+                <button type="submit">Add Todo</button>
+            </form>
+
+            <ul id="cafe-list">
+                <input type="checkbox" name="a" id="abc">
+                <label for="abc"></label>
+                <span>abc</span>
+
+            </ul>
+
+
+        </div>
+        <script src="apikey.js"></script>
+        <script>
+            // Initialize Firebase
+            firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
