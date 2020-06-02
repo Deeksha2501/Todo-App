@@ -9,10 +9,7 @@ function renderCafe(doc){
     checkbox.type = "checkbox";
     checkbox.id =  doc.id;
     checkbox.name = "check";
-    var html =  //<input type="checkbox" name="check" id="${doc.id}>
-    `<label for="${doc.id}"><div>&#10004;</div></label>`
-    let ID  = doc.id;
-    console.log(ID);
+    var html =`<label for="${doc.id}"><div>&#10004;</div></label>`;
     let li = document.createElement('li');
     let todo = document.createElement('span');
     let motive = document.createElement('span');
@@ -38,27 +35,11 @@ function renderCafe(doc){
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
         db.collection('cafes').doc(id).delete();
-        getdata();
-    });
-
-    checkbox.addEventListener('click' , e=>{
-        // e.target.parentElement.classList.toggle('a');
-        // e.target.nextElementSibling.textContent = "ncjewknk"
-        console.log(checkbox.checked);
     });
 
 
 }
 
-//getting data
-// getdata = () =>{
-// db.collection('cafes').get().then(snapshot => {
-//     cafeList.textContent = '';
-//     snapshot.docs.forEach(doc => {
-//         renderCafe(doc)
-//     });
-// });
-// }
 
 //saving data
 form.addEventListener('submit' , e=>{
@@ -79,10 +60,7 @@ form.addEventListener('submit' , e=>{
     form.todo.value = '';
     form.motive.value = '';
     form.todo.focus();
-    getdata();
 })
-
-// getdata();
 
 db.collection('cafes').onSnapshot((snapshot)=>{
     let changes = snapshot.docChanges();
